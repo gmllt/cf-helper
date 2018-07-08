@@ -1,0 +1,52 @@
+{
+  "name": "gmllt/cf-helper",
+  "description": "Simple helper for accessing cloudfoundry VCAP_SERVICES and VCAP_APPLICATION env variables",
+  "version": "0.1.0",
+  "type": "library",
+  "keywords": [
+    "cloudfoundry",
+    "phpbuildpack"
+  ],
+  "homepage": "https://gitlab.com/gmllt/cf-helper",
+  "readme": "README.md",
+  "license": "GNU General Public License v3.0",
+  "authors": [
+    {
+      "name": "Gilles Miraillet",
+      "email": "g.miraillet@gmail.com",
+      "homepage": "https://gitlab.com/gmllt",
+      "role": "Developer"
+    }
+  ],
+  "support": {
+    "issues": "https://gitlab.com/gmllt/cf-helper/issues",
+    "wiki": "https://gitlab.com/gmllt/cf-helper/wikis/home",
+    "source": "https://gitlab.com/gmllt/cf-helper/tree/master"
+  },
+  "minimum-stability": "stable",
+  "require": {
+  },
+  "require-dev": {
+    "squizlabs/php_codesniffer": "*",
+    "phpunit/phpunit": "*",
+    "phploc/phploc": "*",
+    "phpdocumentor/phpdocumentor": "*"
+  },
+  "autoload": {
+    "psr-4": {
+      "Gmllt\\CfHelper\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Gmllt\\CfHelper\\Test\\": "tests/"
+    }
+  },
+  "scripts": {
+    "tests": "vendor/bin/phpunit -c phpunit.xml",
+    "code_sniff": "vendor/bin/phpcs src/ --standard=vendor/squizlabs/php_codesniffer/src/Standards/PSR12/ruleset.xml --warning-severity=8 --error-severity=1",
+    "phpcbf": "vendor/bin/phpcbf src/ tests/ --standard=vendor/squizlabs/php_codesniffer/src/Standards/PSR12/ruleset.xml",
+    "loc" : "vendor/bin/phploc src/"
+
+  }
+}
